@@ -15,8 +15,6 @@ var mspaint = {
 		canvas.width = parseInt(sketch_style.getPropertyValue('width'));
 		canvas.height = parseInt(sketch_style.getPropertyValue('height'));
 
-		this.currentIcon = document.getElementById('current');
-
 		var mouse = {
 			x: 0, y: 0,
 			getX: function() {
@@ -61,14 +59,6 @@ var mspaint = {
 			machine.paintContext.stroke();
 		};
 
-		/* Color changing */
-	 	var colorButtons = document.getElementsByClassName('color');
-	 	for (var index = 0; index < colorButtons.length; index++) {
-		 	colorButtons[index].addEventListener('click', function(){
-		 		machine.setColor(this.getAttribute('data-color'));
-		 	});
-	 	}
-
 	},
 	setLineWidth: function(lineWidth) {
 		this.paintContext.lineWidth = lineWidth;
@@ -84,8 +74,3 @@ var mspaint = {
 		this.paintContext.strokeStyle = '#' + color;
 	},
 }
-
-window.onload = function() {
-	mspaint.start('#sketch', '#paint');
-};
-
