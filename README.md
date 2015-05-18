@@ -14,3 +14,5 @@ window.onload = function() {
 	mspaint.start('#sketch', '#paint');
 };
 ```
+
+Check out a demo (my portfolio) running at http://tanner.xyz
