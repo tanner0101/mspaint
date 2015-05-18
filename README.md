@@ -1,6 +1,6 @@
 # MS Paint for Javascript
 
-HTML + JS to make simple MSPaint app
+HTML + JS to make simple MS Paint app
 
 ```html
 <div id="sketch">
